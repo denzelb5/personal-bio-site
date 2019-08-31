@@ -1,3 +1,40 @@
 body {
-    background-color: blanchedalmond;
+    
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8e/Ex_%22Kurtz%22_Violin_MET_DP302645.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: whitesmoke;
+       
+    
+    
+}
+
+h1 {
+    font-size: 3.5em;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#navLinks {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+
+#navLinks:hover {
+    color: green;
+    cursor: pointer;
+}
+
+
+#navLinks a {
+    margin-right: 1em;
+    text-decoration: underline;
+
+
 }
