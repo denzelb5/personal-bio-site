@@ -26,8 +26,8 @@ h1 {
 }
 
 
-#navLinks:hover {
-    color: green;
+#navLinks a:hover {
+    color: red;
     cursor: pointer;
 }
 
@@ -37,4 +37,10 @@ h1 {
     text-decoration: underline;
 
 
+}
+
+#projectsPage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
