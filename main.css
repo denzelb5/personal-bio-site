@@ -39,8 +39,19 @@ h1 {
 
 }
 
-#projectsPage {
+#projectsPage.fullPage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+#projectsPage.projectCard {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    border: 3px solid whitesmoke;
+    margin: 1em;
+    width: 30%;
+    background-color: blue
 }

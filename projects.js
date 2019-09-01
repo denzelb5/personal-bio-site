@@ -64,7 +64,7 @@ const createProjectCards = (projectList) => {
     for (let i = 0; i < projectList.length; i++) {
         const projects = projectList[i];
         domString += `
-        <div id="projectsPage">
+        <div id="projectsPage" class="projectCard">
             <h2 id="title">${projects.title}</h2>
             <img src='${projects.screenshot}' alt='Image of ${projects.title}'>
             <p>${projects.description}</p>
