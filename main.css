@@ -72,15 +72,13 @@ h1 {
     
 }
 
+
 .footer a {
     color: whitesmoke;
+    margin-right: 30px;
 }
 
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
+.footer img {
+    width: 25px;
+    
 }
