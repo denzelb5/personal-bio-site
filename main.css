@@ -1,8 +1,8 @@
 body {
     
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8e/Ex_%22Kurtz%22_Violin_MET_DP302645.jpg");
-    background-color: #cccccc;
-    height: 500px;
+    background-color: black;
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,9 +53,34 @@ h1 {
     border: 3px solid whitesmoke;
     margin: 1em;
     width: 30%;
-    background-color: blue;
+    background-color: #4a89b3;
 }
 
 .projectCard img {
     width: 90%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color:#3c8484;
+    margin-bottom: 0;
+    height: 80px;
+    align-items: center;
+    list-style: none;
+
+    
+}
+
+.footer a {
+    color: whitesmoke;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
 }
