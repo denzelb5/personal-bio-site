@@ -98,7 +98,7 @@ const availableProjects = (projectArr) => {
     createProjectCards(availableProject)
 }
 
-availableProjects(projects)
+
 
 /*const availableProjects = (projectArray) => {
     let project = projects.available;
