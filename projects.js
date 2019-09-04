@@ -1,5 +1,7 @@
 console.log('what am i doing?');
 
+
+
 const projects = [{
   title: "Cool Project", 
   screenshot: "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG", 
@@ -84,7 +86,7 @@ createProjectCards(projects)
 
 
 
-const availableProjects = (projectArr) => {
+/*const availableProjects = (projectArr) => {
     
     const availableProject = [];
     for (let i = 0; i < projectArr.length; i++) {
@@ -97,7 +99,7 @@ const availableProjects = (projectArr) => {
     }
     createProjectCards(availableProject)
 }
-
+/*availableProjects(availableProject)*/
 
 
 /*const availableProjects = (projectArray) => {
@@ -113,13 +115,17 @@ const availableProjects = (projectArr) => {
 
 const assignProjects = (event) => {
     const projectAvailability = event.target.id;
+    console.log(projectAvailability)
     const selectedProject = [];
     for (let i = 0; i < projects.length; i++) {
         const project = projects[i];
-        if (projects.available === projectAvailability) {
+        if (project.available) {
+            console.log('intheif')
             selectedProject.push(project)
         }
+
     }
-    createProjectCards(availableProjects(availableProject));
+    console.log(selectedProject)
+    createProjectCards(selectedProject);
 }
-document.getElementById('projectsPage').addEventListener('click', assignProjects)
+document.getElementById('navToProjects').addEventListener('click', assignProjects)
