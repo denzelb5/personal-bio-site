@@ -7,12 +7,14 @@ const technologies = [{
     lang2: 'Python'
 },
 { 
+    
     lang1: 'GIT', 
     lang2: 'Github'
 },
 {
-    lang1: 'Jupyter Notebooks', 
-    lang2: 'Bootstrap 4', 
+    
+    lang1: 'Jupyter', 
+    lang2: 'Bootstrap 4' 
     
 }];
 
@@ -22,7 +24,8 @@ const printTechnologies = (techArr) => {
     for (let i = 0; i < techArr.length; i++) {
         const tech = techArr[i];
         domString += `
-        <div class="card" id="techPage">
+        <div class="fullPage" id="technologiesPage">
+            
             <ul>
                 
                 <li>${tech.lang1}</li>
@@ -37,3 +40,16 @@ const printTechnologies = (techArr) => {
 
 printTechnologies(technologies)
 
+/*
+const techClick = (event) => {
+    const choice = event.target.id;
+    selectedChoice = []
+    for (let i = 0; i < technologies.length; i++) {
+        let techClick = technologies[i];
+        selectedChoice.push[]
+    }
+}
+*/
+document.getElementById("navToTechnologies").addEventListener("click", function(event){
+    event.preventDefault()
+  });

@@ -23,6 +23,7 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
+    color: whitesmoke;
 }
 
 
@@ -35,6 +36,7 @@ h1 {
 #navLinks a {
     margin-right: 1em;
     text-decoration: underline;
+    color: whitesmoke;
 
 
 }
@@ -60,13 +62,20 @@ h1 {
     width: 90%;
 }
 
-.card {
-    width: 15%;
-    height: 300px;
+#technologiesPage {
+    display: inline-block;
+    margin: 1em;
+    margin-left: 1.5em;
+}
+
+#technologiesPage ul {
+    width: 100px;
+    height: 200px;
     background-color: #bb3636;
     padding-top: 3em;
     margin: 2em 4em;
     display: inline-block;
+    align-items:flex-start
     text-align: left;
     
 
@@ -74,11 +83,11 @@ h1 {
     
 }
 
-.card li {
+#technologiesPage ul li {
     list-style: none;
-    color: #d4c3c3;
+    color: #b3aeae;
     margin-bottom: 1em;
-    
+    text-align: left;
     
 
 }
