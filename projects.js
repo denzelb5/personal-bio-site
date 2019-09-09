@@ -82,36 +82,8 @@ const createProjectCards = (projectList) => {
     printToDom(domString, 'projectsPage')
 
 }
-createProjectCards(projects)
 
 
-
-/*const availableProjects = (projectArr) => {
-    
-    const availableProject = [];
-    for (let i = 0; i < projectArr.length; i++) {
-        let project = projectArr[i];
-        if (projects.available === true) {
-            availableProject.push(project)
-            
-        }
-        return availableProject
-    }
-    createProjectCards(availableProject)
-}
-/*availableProjects(availableProject)*/
-
-
-/*const availableProjects = (projectArray) => {
-    let project = projects.available;
-    for (let i = 0; i < projectArray.length; i++) {
-        if (project === true) {
-            return project
-        }
-    }
-}
- console.log(availableProjects(projects))
- */
 
 const assignProjects = (event) => {
     const projectAvailability = event.target.id;
@@ -120,7 +92,7 @@ const assignProjects = (event) => {
     for (let i = 0; i < projects.length; i++) {
         const project = projects[i];
         if (project.available) {
-            console.log('intheif')
+            
             selectedProject.push(project)
         }
 
