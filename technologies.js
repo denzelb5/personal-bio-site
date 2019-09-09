@@ -42,9 +42,9 @@ const printTechnologies = (event) => {
 }
 
 // Show an element
-const hideContent = () => {
-	document.getElementById('technologiesPage').style.display = 'none';
-};
+// const hideContent = () => {
+// 	document.getElementById('technologiesPage').style.display = 'none';
+// };
 
 // // Hide an element
 // var hide = function (elem) {
@@ -52,7 +52,7 @@ const hideContent = () => {
 // };
 
 const techLink = document.getElementById("navToTechnologies");
-techLink.addEventListener('click', hideContent);
+//techLink.addEventListener('click', hideContent);
 techLink.addEventListener("click", printTechnologies);
 
     
