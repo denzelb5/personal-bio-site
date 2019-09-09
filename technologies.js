@@ -19,7 +19,7 @@ const technologies = [{
 }];
 
 
-const printTechnologies = (techArr) => {
+const createTechnologies = (techArr) => {
     let domString = '';
     for (let i = 0; i < techArr.length; i++) {
         const tech = techArr[i];
@@ -36,20 +36,24 @@ const printTechnologies = (techArr) => {
     }
     printToDom(domString, 'technologiesPage')
 }  
-    
 
-printTechnologies(technologies)
-
-/*
-const techClick = (event) => {
-    const choice = event.target.id;
-    selectedChoice = []
-    for (let i = 0; i < technologies.length; i++) {
-        let techClick = technologies[i];
-        selectedChoice.push[]
-    }
+const printTechnologies = (event) => {
+    createTechnologies(technologies)
 }
-*/
-document.getElementById("navToTechnologies").addEventListener("click", function(event){
-    event.preventDefault()
-  });
+
+// Show an element
+const hideContent = () => {
+	document.getElementById('technologiesPage').style.display = 'none';
+};
+
+// // Hide an element
+// var hide = function (elem) {
+// 	elem.style.display = 'none';
+// };
+
+const techLink = document.getElementById("navToTechnologies");
+techLink.addEventListener('click', hideContent);
+techLink.addEventListener("click", printTechnologies);
+
+    
+  
