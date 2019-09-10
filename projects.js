@@ -80,6 +80,8 @@ const createProjectCards = (projectList) => {
         `
     }
     printToDom(domString, 'projectsPage')
+    printToDom('', 'bioPage')
+    printToDom('', 'technologiesPage')
 
 }
 

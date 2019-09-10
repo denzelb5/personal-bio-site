@@ -35,6 +35,8 @@ const createTechnologies = (techArr) => {
        `
     }
     printToDom(domString, 'technologiesPage')
+    printToDom('', 'bioPage')
+    printToDom('', 'projectsPage')
 }  
 
 const printTechnologies = (event) => {

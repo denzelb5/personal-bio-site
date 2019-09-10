@@ -12,6 +12,8 @@ const createBio = () => {
     blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>   
     `
     printToDom(bioString, 'bioPage')
+    printToDom('', 'projectsPage')
+    printToDom('', 'technologiesPage')
 }
 
 document.getElementById('navToBio').addEventListener('click', createBio);
