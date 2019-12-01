@@ -1,0 +1,29 @@
+{
+  "project1": {
+    "name": "Pinterest",
+    "date": "November 10th, 2019",
+    "siteUrl": "",
+    "type": "Solo",
+    "description": "An imitation of the website Pinterest",
+    "technologiesUsed": "Firebase, JQuery, Webpack, Javascript, SCSS, HTML",
+    "screenshot": ""
+  },
+  "project2": {
+    "name": "nutshell-renaissaince-fair",
+    "date": "November 20, 2019",
+    "siteUrl": "",
+    "type": "Group",
+    "description": "Renaissance fair organizational application.",
+    "technologiesUsed": "Firebase, JQuery, Webpack, Javascript, SCSS, HTML",
+    "screenshot": ""
+  },
+  "project3": {
+    "name": "Solar System",
+    "date": "October 14, 2019",
+    "siteUrl": "",
+    "type": "Solo",
+    "description": "Informational app about the planets of the solar system.",
+    "technologiesUsed": "JQuery, Webpack, Javascript, SCSS, HTML",
+    "screenshot": ""
+  }
+}

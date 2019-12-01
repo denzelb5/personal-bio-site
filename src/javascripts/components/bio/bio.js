@@ -1,8 +1,10 @@
+import utilities from '../../helpers/utilities';
+
 console.log('bio page');
 
 const createBio = () => {
-    let bioString = '';
-    bioString += `
+  let bioString = '';
+  bioString += `
     <p>
     <li>Professional Violinist for the last 25 years</li>
     <li>Member of Nashville Symphony for 23 years, permanent 4th chair</li>
@@ -22,10 +24,10 @@ const createBio = () => {
     <li>Adjunct Professor of Violin at Blair School of Music for 14 years.
     
     </p>   
-    `
-    printToDom(bioString, 'bioPage')
-    printToDom('', 'projectsPage')
-    printToDom('', 'technologiesPage')
-}
+    `;
+  utilities.printToDom(bioString, 'bioPage');
+  utilities.printToDom('', 'projectsPage');
+  utilities.printToDom('', 'technologiesPage');
+};
 
 document.getElementById('navToBio').addEventListener('click', createBio);
