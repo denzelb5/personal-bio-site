@@ -2,11 +2,11 @@
   "project1": {
     "name": "Pinterest",
     "date": "November 10th, 2019",
-    "siteUrl": "",
+    "siteUrl": "https://pinterest-5ca23.firebaseapp.com",
     "type": "Solo",
     "description": "An imitation of the website Pinterest",
     "technologiesUsed": "Firebase, JQuery, Webpack, Javascript, SCSS, HTML",
-    "screenshot": ""
+    "screenshot": "https://github.com/denzelb5/pinterest/raw/master/screenshots/pinterest1.png"
   },
   "project2": {
     "name": "nutshell-renaissaince-fair",
