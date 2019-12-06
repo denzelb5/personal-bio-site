@@ -30,4 +30,8 @@ const createBio = () => {
   utilities.printToDom('', 'technologiesPage');
 };
 
-document.getElementById('navToBio').addEventListener('click', createBio);
+const showBio = () => {
+  $('body').on('click', '#navToBio', createBio);
+};
+
+export default { showBio };

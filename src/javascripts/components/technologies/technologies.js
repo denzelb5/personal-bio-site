@@ -50,10 +50,10 @@ const printTechnologies = () => {
 // elem.style.display = 'none';
 // };
 
-const displayTech = () => {
-  const techLink = document.getElementById('navToTechnologies');
-  //  techLink.addEventListener('click', hideContent);
-  techLink.addEventListener('click', printTechnologies);
-};
+// const displayTech = () => {
+//   const techLink = document.getElementById('navToTechnologies');
+//   //  techLink.addEventListener('click', hideContent);
+//   // techLink.addEventListener('click', printTechnologies);
+// };
 
-export default { displayTech };
+export default { };

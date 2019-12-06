@@ -1,4 +1,6 @@
+import $ from 'jquery';
 import utilities from '../../helpers/utilities';
+import projectData from '../../helpers/data/projectData';
 
 
 const createProjectCards = (projectList) => {
@@ -25,15 +27,26 @@ const createProjectCards = (projectList) => {
 
 const assignProjects = (event) => {
   const projectAvailability = event.target.id;
-  console.log(projectAvailability);
-  const selectedProject = [];
-  for (let i = 0; i < projects.length; i += 1) {
-    const project = projects[i];
-    if (project.available) {
-      selectedProject.push(project);
-    }
-  }
-  console.log(selectedProject);
-  createProjectCards(selectedProject);
+  projectData.getProjects()
+    .then((projects) => {
+      console.log(projectAvailability);
+      const selectedProject = [];
+      for (let i = 0; i < projects.length; i += 1) {
+        const project = projects[i];
+        if (project.available) {
+          selectedProject.push(project);
+        }
+      }
+      console.log(selectedProject);
+      createProjectCards(selectedProject);
+    })
+    .catch((error) => console.error(error));
 };
-document.getElementById('navToProjects').addEventListener('click', assignProjects)
+
+// document.getElementById('navToProjects').addEventListener('click', assignProjects);
+
+const showProjects = () => {
+  $('body').on('click', '#navToProjects', assignProjects);
+};
+
+export default { showProjects };
