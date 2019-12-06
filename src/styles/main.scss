@@ -2,15 +2,12 @@
 
 body {
     
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8e/Ex_%22Kurtz%22_Violin_MET_DP302645.jpg");
-    
-    background-color: black;
-    height: 400px;
+    background-image: url("data:image/jpeg;base64,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");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    color: whitesmoke;
+    // color: whitesmoke;
         
        
     
@@ -79,12 +76,8 @@ h1 {
     padding-top: 3em;
     margin: 2em 4em;
     display: inline-block;
-    align-items:flex-start
+    align-items:flex-start;
     text-align: left;
-    
-
-
-    
 }
 
 #technologiesPage ul li {
@@ -102,7 +95,6 @@ h1 {
     justify-content: space-evenly;
     background-color:#3c8484;
     margin-bottom: 0;
-    margin-top: 700px;
     height: 80px;
     align-items: center;
     align-content: flex-end;

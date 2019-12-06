@@ -2,28 +2,37 @@
   "project1": {
     "name": "Pinterest",
     "date": "November 10th, 2019",
-    "siteUrl": "",
+    "siteUrl": "https://pinterest-5ca23.firebaseapp.com",
     "type": "Solo",
     "description": "An imitation of the website Pinterest",
     "technologiesUsed": "Firebase, JQuery, Webpack, Javascript, SCSS, HTML",
-    "screenshot": ""
+    "screenshot": "https://github.com/denzelb5/pinterest/raw/master/screenshots/pinterest1.png"
   },
   "project2": {
     "name": "nutshell-renaissaince-fair",
     "date": "November 20, 2019",
-    "siteUrl": "",
+    "siteUrl": "https://freelancer-redux.web.app/",
     "type": "Group",
     "description": "Renaissance fair organizational application.",
     "technologiesUsed": "Firebase, JQuery, Webpack, Javascript, SCSS, HTML",
-    "screenshot": ""
+    "screenshot": "https://github.com/nss-evening-cohort-10/nutshell-renaissance-fair/raw/master/src/javascripts/helpers/Screenshot%201.PNG?raw=true"
   },
   "project3": {
     "name": "Solar System",
     "date": "October 14, 2019",
-    "siteUrl": "",
+    "siteUrl": " https://solar-system-dcb17.firebaseapp.com",
     "type": "Solo",
     "description": "Informational app about the planets of the solar system.",
     "technologiesUsed": "JQuery, Webpack, Javascript, SCSS, HTML",
-    "screenshot": ""
+    "screenshot": "https://github.com/denzelb5/Solar-System/raw/master/screenshots/solar-2.png?raw=true"
+  },
+  "project4": {
+    "name": "nutshell-nautilus-explorer",
+    "date": "December 4, 2019",
+    "siteUrl": "https://nautilus-explorer-part2.web.app/",
+    "type": "Group",
+    "description": "Nautilus ship excursion organizational application.",
+    "technologiesUsed": "Firebase, JQuery, Webpack, Javascript, SCSS, HTML",
+    "screenshot": "https://raw.githubusercontent.com/nss-evening-cohort-10/nutshell-nautilus-explorer/master/src/assets/images/homepage-screenshot.png"
   }
 }

@@ -1,97 +1,62 @@
+// import $ from 'jquery';
 import utilities from '../../helpers/utilities';
-
-console.log('what am i doing?');
-
-
-// const projects = [{
-//   title: "Cool Project", 
-//   screenshot: "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG", 
-//   description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
-//   technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
-//   available: true,
-//   url: "https://github.com/nss-evening-cohort-8/js-part-deux", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
-//   githubUrl: "https://github.com/nss-evening-cohort-8/js-part-deux"
-// },
-// {
-//     title: "Cool Project", 
-//   screenshot: "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG", 
-//   description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
-//   technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
-//   available: false,
-//   url: "https://github.com/nss-evening-cohort-8/js-part-deux", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
-//   githubUrl: "https://github.com/nss-evening-cohort-8/js-part-deux"
-// },
-// {
-//     title: "Cool Project", 
-//   screenshot: "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG", 
-//   description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
-//   technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
-//   available: false,
-//   url: "https://github.com/nss-evening-cohort-8/js-part-deux", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
-//   githubUrl: "https://github.com/nss-evening-cohort-8/js-part-deux"
-// },
-// {
-//     title: "Cool Project", 
-//   screenshot: "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG", 
-//   description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
-//   technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
-//   available: true,
-//   url: "https://github.com/nss-evening-cohort-8/js-part-deux", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
-//   githubUrl: "https://github.com/nss-evening-cohort-8/js-part-deux"
-// },
-// {
-//     title: "Cool Project", 
-//   screenshot: "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG", 
-//   description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
-//   technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
-//   available: false,
-//   url: "https://github.com/nss-evening-cohort-8/js-part-deux", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
-//   githubUrl: "https://github.com/nss-evening-cohort-8/js-part-deux"
-// },
-// {
-//     title: "Cool Project", 
-//   screenshot: "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG", 
-//   description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
-//   technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
-//   available: true,
-//   url: "https://github.com/nss-evening-cohort-8/js-part-deux", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
-//   githubUrl: "https://github.com/nss-evening-cohort-8/js-part-deux"
-// }]
+import projectData from '../../helpers/data/projectData';
 
 
-const createProjectCards = (projectList) => {
+const createProjectCards = (project) => {
+  const domString = `
+    <div class="card col-3">
+      <h5 class="card-title">${project.name}</h5>
+      <p>${project.description}</p>
+      <img src="${project.screenshot}" class="card-img-top" alt="...">
+      <div class="card-body">
+        
+        <h6 class="card-subtitle mb-2 text-muted">${project.type}</h6>
+        
+      
+        <p class="card-text">${project.technologiesUsed}</p>
+      
+        <a href="${project.siteUrl}" class="card-link">View Project</a>
+      </div>
+    </div>`;
+  return domString;
+};
+
+
+const printProjects = () => {
+  // const projectId = event.target.id;
   let domString = '';
-  for (let i = 0; i < projectList.length; i += 1) {
-    const projects = projectList[i];
-    domString += `
-        <div id="projectsPage" class="projectCard">
-            <h2 id="title">${projects.title}</h2>
-            <img src='${projects.screenshot}' alt='Image of ${projects.title}'>
-            <p>${projects.description}</p>
-            <p>${projects.technologiesUsed}</p>
-            <p>${projects.available}</p>
-            <p>'${projects.url}'</p>
-            <p>'${projects.githubUrl}'</p>
-        </div>
-        `;
-  }
-  utilities.printToDom(domString, 'projectsPage');
-  utilities.printToDom('', 'bioPage');
-  utilities.printToDom('', 'technologiesPage');
+  projectData.getProjects()
+    .then((projects) => {
+      console.error('projects', projects);
+      projects.forEach((project) => {
+        domString += createProjectCards(project);
+      });
+      utilities.printToDom(domString, 'projectContainer');
+    })
+    .catch((error) => console.error(error));
 };
 
+// document.getElementById('navToProjects').addEventListener('click', assignProjects);
 
-const assignProjects = (event) => {
-  const projectAvailability = event.target.id;
-  console.log(projectAvailability);
-  const selectedProject = [];
-  for (let i = 0; i < projects.length; i += 1) {
-    const project = projects[i];
-    if (project.available) {
-      selectedProject.push(project);
-    }
-  }
-  console.log(selectedProject);
-  createProjectCards(selectedProject);
-};
-document.getElementById('navToProjects').addEventListener('click', assignProjects)
+// const showProjects = () => {
+//   $('body').on('click', '#navToProjects', printProjects);
+//   $('#projectsPage').show();
+// };
+
+// for (let i = 0; i < projectList.length; i += 1) {
+//   const projects = projectList[i];
+//   domString += `
+//       <div id="projectsPage" class="projectCard">
+//           <h2 id="title">${projects.title}</h2>
+//           <img src='${projects.screenshot}' alt='Image of ${projects.title}'>
+//           <p>${projects.description}</p>
+//           <p>${projects.technologiesUsed}</p>
+//           <p>${projects.available}</p>
+//           <p>'${projects.url}'</p>
+//           <p>'${projects.githubUrl}'</p>
+//       </div>
+//       `;
+// }
+
+export default { printProjects };
