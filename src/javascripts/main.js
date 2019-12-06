@@ -15,7 +15,7 @@ console.log('hi');
 const init = () => {
   firebase.initializeApp(apiKeys.firebaseKeys);
   // tech.displayTech();
-  projects.showProjects();
+  projects.printProjects();
 };
 
 init();

@@ -22,12 +22,11 @@ const createBio = () => {
         Center
     </li>
     <li>Adjunct Professor of Violin at Blair School of Music for 14 years.
-    
-    </p>   
+    </p>
     `;
   utilities.printToDom(bioString, 'bioPage');
-  utilities.printToDom('', 'projectsPage');
-  utilities.printToDom('', 'technologiesPage');
+  // utilities.printToDom('', 'projectsPage');
+  // utilities.printToDom('', 'technologiesPage');
 };
 
 const showBio = () => {
