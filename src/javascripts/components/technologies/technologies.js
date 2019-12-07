@@ -1,44 +1,39 @@
-// import utilities from '../../helpers/utilities';
+import utilities from '../../helpers/utilities';
+import techData from '../../helpers/data/techData';
 
-// const technologies = [{
-//   lang1: 'HTML',
-//   lang2: 'CSS',
-// },
-// {
-//   lang1: 'Javascript',
-//   lang2: 'Python',
-// },
-// {
-//   lang1: 'GIT',
-//   lang2: 'Github',
-// },
-// {
-//   lang1: 'Jupyter',
-//   lang2: 'Bootstrap 4',
-// }];
+const technologies = [{
+  lang1: 'HTML',
+  lang2: 'CSS',
+},
+{
+  lang1: 'Javascript',
+  lang2: 'Bootstrap 4',
+},
+{
+  lang1: 'Webpack',
+  lang2: 'Firebase',
+}];
 
 
-// const createTechnologies = (techArr) => {
-//   let domString = '';
-//   for (let i = 0; i < techArr.length; i += 1) {
-//     const tech = techArr[i];
-//     domString += `
-//         <div class="fullPage" id="technologiesPage">
-//             <ul>
-//                 <li>${tech.lang1}</li>
-//                 <li>${tech.lang2}</li>
-//             </ul>
-//         </div>
-//        `;
-//   }
-//   utilities.printToDom(domString, 'technologiesPage');
-//   utilities.printToDom('', 'bioPage');
-//   utilities.printToDom('', 'projectsPage');
-// };
+const technologiesCard = (tech) => {
+  let domString = '';
+    domString += `
+      <div class="card-body">
+        <img class="card-img" src="${tech.imageUrl}">
+      </div>
+    `;
+  
+  return domString;
+};
 
-// const printTechnologies = () => {
-//   createTechnologies(technologies);
-// };
+const printTechnologies = () => {
+  let domString = '';
+  techData.getTechnologies()
+  .then(technologies) => {
+    domString += technologiesCard(technologies);
+  }
+  
+};
 
 // // Show an element
 // // const hideContent = () => {
