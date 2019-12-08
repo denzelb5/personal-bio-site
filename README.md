@@ -15,6 +15,8 @@ A bio site still in progress.  There are 3 links.  Each link, when clicked, reve
 
 ![screenshot-4](https://github.com/denzelb5/personal-bio-site/blob/master/screenshots/bio-4.png?raw=true)
 
+![screenshot-5](./screenshots/logo.png)
+
 ## How to run
 * Clone down this project
 * Install http-server from npm
