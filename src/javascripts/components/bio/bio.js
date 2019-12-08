@@ -1,5 +1,6 @@
 // import $ from 'jquery';
 import utilities from '../../helpers/utilities';
+import './bio.scss';
 
 console.error('bio page');
 
