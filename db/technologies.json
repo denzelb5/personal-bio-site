@@ -7,27 +7,27 @@
       "language": "CSS",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
   },
-    "tech4": {
+    "tech3": {
       "language": "SCSS",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg"
   },
-    "tech5": {
+    "tech4": {
       "language": "Javascript",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Javascript_badge.svg"
   },
-    "tech6": {
+    "tech5": {
       "language": "Firebase",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg"
     },
-    "tech7": {
+    "tech6": {
       "language": "Bootstrap 4",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg"
     },
-    "tech8": {
+    "tech7": {
       "language": "React",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
     },
-    "tech9": {
+    "tech8": {
       "language": "JQuery",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/JQuery-Logo.svg"
     }

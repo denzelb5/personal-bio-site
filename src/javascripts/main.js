@@ -2,7 +2,7 @@ import firebase from 'firebase';
 import apiKeys from './helpers/apiKeys.json';
 import 'bootstrap';
 import '../styles/main.scss';
-// import tech from './components/technologies/technologies';
+import tech from './components/technologies/technologies';
 import projects from './components/projects/projects';
 import bio from './components/bio/bio';
 
@@ -18,6 +18,7 @@ const init = () => {
   // tech.displayTech();
   projects.printProjects();
   bio.createBio();
+  tech.printTechnologies();
 };
 
 init();
