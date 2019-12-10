@@ -10,28 +10,29 @@
     <body>
     <!-- Navigation --> 
     <!-- Image and text -->
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-dark">
     <a class="navbar-brand" href="#">
-      <img src="./screenshots/logo.png" width="100" height="100" class="d-inline-block align-top" alt="">
-      
+      <img src="https://github.com/denzelb5/personal-bio-site/raw/master/screenshots/logo.png" width="200" height="100" class="d-inline-block align-top" alt="">
     </a>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a id="navToBio" class="nav-link active" href="#">About Me</a>
+        </li>
+    </ul>
   </nav>
 
-    <!-- <nav>
-        <h1>Denise Baker</h1>
-        <ul id="navLinks">
-        <li><a id="navToBio">Bio</a></li>
-        <li><a id="navToTechnologies">Technologies</a></li>
-        <li><a id="navToProjects">Projects</a></li>
-        </ul>
-    </nav> -->
+    
     <!-- End Navigation -->
 
     <!-- Primary View -->
-    <div id="bioPage" class="container"></div>
-    <div class="container d-flex flex-wrap" id="projectContainer"></div>
-    
+    <div id="bioPage"></div>
+    <div id="video"></div>
+    <h1 id="project-title" class="text-center">Recent Projects</h1>
+    <div class="d-flex flex-wrap" id="projectContainer"></div>
     <div class="d-flex flex-wrap" id="technologiesPage"></div>
+    <div id="about-me" class="container">
+        
+    </div>
     
     
     <!-- End Primary View -->

@@ -18,7 +18,9 @@ const init = () => {
   // tech.displayTech();
   projects.printProjects();
   bio.createBio();
+  bio.showBio();
   tech.printTechnologies();
+  bio.displayVideos();
 };
 
 init();
