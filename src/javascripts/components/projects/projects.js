@@ -1,21 +1,18 @@
 // import $ from 'jquery';
 import utilities from '../../helpers/utilities';
 import projectData from '../../helpers/data/projectData';
+import './projects.scss';
 
 
 const createProjectCards = (project) => {
   const domString = `
-    <div class="card col-3">
-      <h5 class="card-title">${project.name}</h5>
-      <p>${project.description}</p>
+    <div class="card project-card col-2">
+      
       <img src="${project.screenshot}" class="card-img-top" alt="...">
       <div class="card-body">
-        
-        <h6 class="card-subtitle mb-2 text-muted">${project.type}</h6>
-        
-      
-        <p class="card-text">${project.technologiesUsed}</p>
-      
+        <h5 class="card-title">${project.name}</h5>
+        <p>${project.description}</p>
+        <p id="techUsed" class="card-subtitle mb-2 text-muted">${project.technologiesUsed}</p>
         <a href="${project.siteUrl}" class="card-link">View Project</a>
       </div>
     </div>`;
@@ -24,11 +21,9 @@ const createProjectCards = (project) => {
 
 
 const printProjects = () => {
-  // const projectId = event.target.id;
   let domString = '';
   projectData.getProjects()
     .then((projects) => {
-      console.error('projects', projects);
       projects.forEach((project) => {
         domString += createProjectCards(project);
       });
