@@ -20,7 +20,7 @@ const init = () => {
   bio.createBio();
   bio.showBio();
   tech.printTechnologies();
-  bio.displayVideos();
+  // bio.displayVideos();
 };
 
 init();

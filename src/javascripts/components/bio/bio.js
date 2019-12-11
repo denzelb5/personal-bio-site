@@ -7,7 +7,7 @@ console.error('bio page');
 const createBio = () => {
   let bioString = '';
   bioString += `
-  <div class="card mb-3 bio-card" style="max-width: 840px;">
+  <div class="card mb-3 bio-card" style="max-width: 800px;">
   <div class="row no-gutters">
     <div class="bio col-md-4">
       <img src="https://media.licdn.com/dms/image/C4D03AQG1gAmC5Jneow/profile-displayphoto-shrink_200_200/0?e=1580947200&v=beta&t=F_c5vrPb_PTt5wnh7v93hFxzf84cdjfRfPA3DNddQ_E" class="card-img rounded-circle" alt="...">
@@ -32,18 +32,25 @@ const createBio = () => {
       life, the constant necessity to always keep learning, and the 
       puzzle aspect of trouble shooting and problem solving.   
       </p>
-    
+      
       </div>
+      
     </div>
   </div>
 </div>
-    
     `;
+  bioString += '<img id="nso-pic" src="https://www.nashvillesymphony.org/media/2461/750_1060-44square.jpg">';
   utilities.printToDom(bioString, 'bioPage');
 };
 
 const aboutMe = () => {
   const domString = `
+  <div id="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ryuIMpOdbpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qBvrHxT94Mg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0QST7zXJizc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+    <div id="more-about-me">
   <p class="card-text">    
     <li>Professional Violinist for the last 25 years</li>
     <li>Member of Nashville Symphony for 23 years, permanent 4th chair</li>
@@ -62,23 +69,23 @@ const aboutMe = () => {
     </li>
     <li>Adjunct Professor of Violin at Blair School of Music for 14 years.
         </p>
-        <p class="card-text"></p>`;
-  utilities.printToDom(domString, 'about-me');
-};
-
-const displayVideos = () => {
-  const domString = `
-  <img src="https://www.nashvillesymphony.org/media/2461/750_1060-44square.jpg">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/ryuIMpOdbpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/qBvrHxT94Mg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/0QST7zXJizc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  `;
+        <p class="card-text"></p>
+        </div>`;
   utilities.printToDom(domString, 'video');
 };
+
+// const displayVideos = () => {
+//   const domString = `
+//   <iframe width="560" height="315" src="https://www.youtube.com/embed/ryuIMpOdbpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//   <iframe width="560" height="315" src="https://www.youtube.com/embed/qBvrHxT94Mg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//   <iframe width="560" height="315" src="https://www.youtube.com/embed/0QST7zXJizc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//   `;
+//   utilities.printToDom(domString, 'video');
+// };
 
 
 const showBio = () => {
   $('body').on('click', '#navToBio', aboutMe);
 };
 
-export default { createBio, showBio, displayVideos };
+export default { createBio, showBio };

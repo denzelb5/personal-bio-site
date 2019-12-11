@@ -1,16 +1,46 @@
 .project-card {
-  margin: 1em 1em 6em 3em;
+  margin: 1em;
+  margin-left: 5em;
+  color: white;
+  background-color: rgba(109, 107, 106, 0.714);
+  height: 300px;
+
+  // .project-header {
+  //   padding: 0;
+  //   margin: 0;
+  // }
+
+    .card-body {
+      padding: 0;
+      margin: 0;
+    }
+
+      .project-image {
+        height: 100%;
+        width: 100%;
+        padding-bottom: 1em;
+      }
 }
 
 #projectContainer {
-  margin-top: 6em;
-  background-image: url('https://publicdomainvectors.org/photos/translucent-background-7.jpg');
-}
+  margin: 2em 1em 0em 1em;
+
+  padding-bottom: 4em;
+  background-image: url('https://c.pxhere.com/images/3f/a8/2a6de52007c310321890d0d480fb-1437665.jpg!d');
+  // background-image: url('https://publicdomainvectors.org/photos/translucent-background-7.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+} 
 
 #project-title {
-  margin-top: 3em;
-  font-size: 6em;
-  color: rgb(123, 61, 39);
+  margin-top: 2em;
+  padding: 1em;
+  font-size: 3em;
+  color: rgb(179, 169, 165);
+  background-color: rgba(56, 56, 92, 0.31);
 }
 
 #techUsed {
