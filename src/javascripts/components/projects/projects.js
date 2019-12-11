@@ -6,31 +6,36 @@ import './projects.scss';
 
 const createProjectCards = (project) => {
   const domString = `
-    <div class="card project-card col-2">
+  
+    <div class="card border-dark project-card col-2">
+    <h5 class="card-header border-danger project-header">${project.name}</h5>
       
-      <img src="${project.screenshot}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">${project.name}</h5>
-        <p>${project.description}</p>
-        <p id="techUsed" class="card-subtitle mb-2 text-muted">${project.technologiesUsed}</p>
-        <a href="${project.siteUrl}" class="card-link">View Project</a>
+      <img src="${project.screenshot}" class="project-image card-img-top" alt="...">
+        
+        
       </div>
-    </div>`;
+    </div>
+    `;
   return domString;
 };
 
 
 const printProjects = () => {
-  let domString = '';
+  let domString = '<h1 id="project-title" class="text-center">Recent Projects</h1>';
+  domString += '<div class="d-flex flex-wrap">';
   projectData.getProjects()
     .then((projects) => {
       projects.forEach((project) => {
         domString += createProjectCards(project);
       });
+      domString += '</div>';
       utilities.printToDom(domString, 'projectContainer');
     })
     .catch((error) => console.error(error));
 };
+// <p id="techUsed" class="card-subtitle mb-2 text-muted">${project.technologiesUsed}</p>
+// <a href="${project.siteUrl}" class="card-link">View Project</a>
 
 // document.getElementById('navToProjects').addEventListener('click', assignProjects);
 
