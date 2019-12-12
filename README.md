@@ -7,18 +7,17 @@ HTML, CSS, Javascript
 Personal Bio Page with sample perfomances, projects, and skills learned.
 
 ## Screenshots
-![screenshot-1](./screenshots/BIO1.png)
+![screenshot-1](https://github.com/denzelb5/personal-bio-site/raw/master/screenshots/BIO1.png)
 
-![screenshot-2](./screenshots/BIO2.png)
+![screenshot-2](https://github.com/denzelb5/personal-bio-site/raw/master/screenshots/BIO2.png)
 
-![screenshot-3](./screenshots/BIO3.png)
+![screenshot-3](https://github.com/denzelb5/personal-bio-site/raw/master/screenshots/BIO3.png)
 
-![screenshot-4](./screenshots/BIO4.png)
+![screenshot-4](https://github.com/denzelb5/personal-bio-site/raw/master/screenshots/BIO4.png)
 
-![screenshot-5](./screenshots/logo.png)
+![screenshot-5](https://github.com/denzelb5/personal-bio-site/raw/master/screenshots/logo.png)
 
 ## How to run
-* Clone down this project
-* Install http-server from npm
-* At the root of this project run the following command: hs -p 8888
-* In your browser navigate to https://localhost: 8888
+* Follow this link to the deployed firebase project:
+
+https://denise-baker.firebaseapp.com
