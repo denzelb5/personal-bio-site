@@ -4,12 +4,35 @@
   background-color: rgba(232, 237, 240, 0.817);
 }
 
-// #bioPage {
-//   border-bottom: solid 3em rgb(225, 155, 155);
-//   border-bottom-height: 10em;
-// }
-
 #nso-pic {
   margin: 4em 1em 1em 2em;
   width: 500px;
 }
+
+#about {
+  margin: 1em;
+}
+
+iframe {
+  margin: 1em;
+}
+
+.about-card {
+  margin: 1em 1em 1em 1em;
+  #denise {
+    height: 100%;
+  }
+    .right-column {
+      background-color: rgba(193, 168, 126, 0.221);
+      color:brown;
+      font-weight: bold;
+      
+    }
+
+    #video-container {
+      background-color: rgba(193, 168, 126, 0.221);
+      padding-left: 2em;
+    }
+
+}
+
