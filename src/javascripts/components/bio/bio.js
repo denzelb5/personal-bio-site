@@ -3,8 +3,6 @@ import utilities from '../../helpers/utilities';
 import './bio.scss';
 import pic from './Denise-with-Michael.jpg';
 
-console.error('bio page');
-
 const createBio = () => {
   let bioString = '';
   bioString += `
@@ -47,39 +45,6 @@ const createBio = () => {
   bioString += '<img id="nso-pic" src="https://www.nashvillesymphony.org/media/2461/750_1060-44square.jpg">';
   utilities.printToDom(bioString, 'bioPage');
 };
-
-// const aboutMe = () => {
-//   const domString = `
-//   <div id="about" class ="d-flex flex-wrap">
-//   <div id="video-container">
-//     <iframe width="450" height="315" src="https://www.youtube.com/embed/ryuIMpOdbpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//     <iframe width="450" height="315" src="https://www.youtube.com/embed/qBvrHxT94Mg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//     <iframe width="450" height="315" src="https://www.youtube.com/embed/0QST7zXJizc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//   </div>
-//     <div id="more-about-me">
-//   <p class="card-text">
-//     <li>Professional Violinist for the last 25 years</li>
-//     <li>Member of Nashville Symphony for 23 years, permanent 4th chair</li>
-//     <li>Winner of 14 Grammy Awards as member of Nashville Symphony</li>
-//     <li>Recordings with professional artists including Garth Brooks, Matchbox 20, Taylor Swift</li>
-//     <li>Music video with Tim McGraw</li>
-//     <li>Movie soundtrack for Bridget Jones Diary</li>
-//     <li>4 Xmas tours with Amy Grant</li>
-//     <li>Extensive performances throughout Europe</li>
-//     <li>Performances at Carnegie Hall</li>
-//     <li>Solo Concerto performances with the Nashville Philharmonic, Nashville Concerto Orchestra, Western
-//         Piedmont Symphony
-//     </li>
-//     <li>Solo performances include Bachinalia Festival, Merkin Hall in NYC, Blair School of Music, Renaissance
-//         Center
-//     </li>
-//     <li>Adjunct Professor of Violin at Blair School of Music for 14 years.
-//         </p>
-//         <p class="card-text"></p>
-//         </div>
-//       </div`;
-//   utilities.printToDom(domString, 'video');
-// };
 
 const aboutMe1 = () => {
   let domString = '';
@@ -127,7 +92,7 @@ const aboutMe1 = () => {
 
 const showBio = () => {
   $('body').on('click', '#navToBio', () => {
-    console.log(aboutMe1());
+    aboutMe1();
     $('#bioPage').hide();
   });
 };

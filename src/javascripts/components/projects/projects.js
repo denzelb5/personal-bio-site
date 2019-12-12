@@ -32,29 +32,5 @@ const printProjects = () => {
     })
     .catch((error) => console.error(error));
 };
-// <p id="techUsed" class="card-subtitle mb-2 text-muted">${project.technologiesUsed}</p>
-// <a href="${project.siteUrl}" class="card-link">View Project</a>
-
-// document.getElementById('navToProjects').addEventListener('click', assignProjects);
-
-// const showProjects = () => {
-//   $('body').on('click', '#navToProjects', printProjects);
-//   $('#projectsPage').show();
-// };
-
-// for (let i = 0; i < projectList.length; i += 1) {
-//   const projects = projectList[i];
-//   domString += `
-//       <div id="projectsPage" class="projectCard">
-//           <h2 id="title">${projects.title}</h2>
-//           <img src='${projects.screenshot}' alt='Image of ${projects.title}'>
-//           <p>${projects.description}</p>
-//           <p>${projects.technologiesUsed}</p>
-//           <p>${projects.available}</p>
-//           <p>'${projects.url}'</p>
-//           <p>'${projects.githubUrl}'</p>
-//       </div>
-//       `;
-// }
 
 export default { printProjects };
