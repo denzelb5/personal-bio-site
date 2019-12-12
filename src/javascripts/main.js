@@ -17,8 +17,9 @@ const init = () => {
   firebase.initializeApp(apiKeys.firebaseKeys);
   // tech.displayTech();
   projects.printProjects();
-  bio.createBio();
-  bio.showBio();
+  bio.init();
+  // bio.createBio();
+  // bio.showBio();
   tech.printTechnologies();
   // bio.displayVideos();
 };

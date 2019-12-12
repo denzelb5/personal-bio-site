@@ -7,14 +7,12 @@ import './projects.scss';
 const createProjectCards = (project) => {
   const domString = `
   
-    <div class="card border-dark project-card col-2">
+    <div class="card text-center border-dark project-card col-2">
     <h5 class="card-header border-danger project-header">${project.name}</h5>
-      
       <div class="card-body">
-      <img src="${project.screenshot}" class="project-image card-img-top" alt="...">
-        
-        
+        <img src="${project.screenshot}" class="project-image card-img-top" alt="...">
       </div>
+      <div><a href="${project.siteUrl}" id="view-project" class="btn btn-sm btn-danger">View Project</a></div>
     </div>
     `;
   return domString;

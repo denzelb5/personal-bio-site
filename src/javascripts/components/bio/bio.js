@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import utilities from '../../helpers/utilities';
 import './bio.scss';
+import pic from './Denise-with-Michael.jpg';
 
 console.error('bio page');
 
@@ -18,21 +19,25 @@ const createBio = () => {
     <div class="col-md-8">
       <div class="card-body">
       <p class="card-text">
-        As a professional violinist with a career spanning over 25 years, 
-        I know what it’s like to have the passion to follow your dreams, 
-        combined with the discipline to make that dream a reality.  
-        A member of the Nashville Symphony, in my 24th season, 
-        I have performed throughout the United States and Europe, 
-        played in Carnegie Hall, and participated in over 14 Grammy 
-        award winning recordings.  
+      As a professional violinist with a career spanning over 25 years, 
+      I have had an exciting journey through the world of music.  
+      A member of the Nashville Symphony, in my 24th season, 
+      I have performed throughout the United States and Europe, 
+      played in Carnegie Hall, and participated in over 14 Grammy 
+      award winning recordings. After years of playing 5 to 7 hours per day, 
+      the job has taken its toll on my shoulder. I've decided that a 
+      career shift is necessary. All my research points toward software 
+      development, as many of the skills overlap with my background in music, 
+      such as creativity, problem-solving, teamwork, and clear communication. 
+      In a symphony orchestra we work together in real time to create our product.
+      Preparation and cooperation are key to making the music happen as an 80-120 
+      piece group, while individually still instilling your own creativity 
+      within that framework.  Both music and software development emphasize 
+      a continuous learning for improvement and delivering a quality end result. I
+      am looking forward to this new adventure!
+  
       </p>
-      <p>
-      I am drawn to writing software for many of the same reasons 
-      I am drawn to music. The creative process of bringing ideas to 
-      life, the constant necessity to always keep learning, and the 
-      puzzle aspect of trouble shooting and problem solving.   
-      </p>
-      
+      <a id="navToBio" class="link" href="#video">More About Me</a>
       </div>
       
     </div>
@@ -43,49 +48,93 @@ const createBio = () => {
   utilities.printToDom(bioString, 'bioPage');
 };
 
-const aboutMe = () => {
-  const domString = `
-  <div id="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ryuIMpOdbpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/qBvrHxT94Mg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/0QST7zXJizc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-    <div id="more-about-me">
-  <p class="card-text">    
-    <li>Professional Violinist for the last 25 years</li>
-    <li>Member of Nashville Symphony for 23 years, permanent 4th chair</li>
-    <li>Winner of 14 Grammy Awards as member of Nashville Symphony</li>
-    <li>Recordings with professional artists including Garth Brooks, Matchbox 20, Taylor Swift</li>
-    <li>Music video with Tim McGraw</li>
-    <li>Movie soundtrack for Bridget Jones Diary</li>
-    <li>4 Xmas tours with Amy Grant</li>
-    <li>Extensive performances throughout Europe</li>
-    <li>Performances at Carnegie Hall</li>
-    <li>Solo Concerto performances with the Nashville Philharmonic, Nashville Concerto Orchestra, Western
-        Piedmont Symphony
-    </li>
-    <li>Solo performances include Bachinalia Festival, Merkin Hall in NYC, Blair School of Music, Renaissance
-        Center
-    </li>
-    <li>Adjunct Professor of Violin at Blair School of Music for 14 years.
-        </p>
-        <p class="card-text"></p>
-        </div>`;
-  utilities.printToDom(domString, 'video');
-};
-
-// const displayVideos = () => {
+// const aboutMe = () => {
 //   const domString = `
-//   <iframe width="560" height="315" src="https://www.youtube.com/embed/ryuIMpOdbpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//   <iframe width="560" height="315" src="https://www.youtube.com/embed/qBvrHxT94Mg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//   <iframe width="560" height="315" src="https://www.youtube.com/embed/0QST7zXJizc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//   `;
+//   <div id="about" class ="d-flex flex-wrap">
+//   <div id="video-container">
+//     <iframe width="450" height="315" src="https://www.youtube.com/embed/ryuIMpOdbpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//     <iframe width="450" height="315" src="https://www.youtube.com/embed/qBvrHxT94Mg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//     <iframe width="450" height="315" src="https://www.youtube.com/embed/0QST7zXJizc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//   </div>
+//     <div id="more-about-me">
+//   <p class="card-text">
+//     <li>Professional Violinist for the last 25 years</li>
+//     <li>Member of Nashville Symphony for 23 years, permanent 4th chair</li>
+//     <li>Winner of 14 Grammy Awards as member of Nashville Symphony</li>
+//     <li>Recordings with professional artists including Garth Brooks, Matchbox 20, Taylor Swift</li>
+//     <li>Music video with Tim McGraw</li>
+//     <li>Movie soundtrack for Bridget Jones Diary</li>
+//     <li>4 Xmas tours with Amy Grant</li>
+//     <li>Extensive performances throughout Europe</li>
+//     <li>Performances at Carnegie Hall</li>
+//     <li>Solo Concerto performances with the Nashville Philharmonic, Nashville Concerto Orchestra, Western
+//         Piedmont Symphony
+//     </li>
+//     <li>Solo performances include Bachinalia Festival, Merkin Hall in NYC, Blair School of Music, Renaissance
+//         Center
+//     </li>
+//     <li>Adjunct Professor of Violin at Blair School of Music for 14 years.
+//         </p>
+//         <p class="card-text"></p>
+//         </div>
+//       </div`;
 //   utilities.printToDom(domString, 'video');
 // };
 
+const aboutMe1 = () => {
+  let domString = '';
+  domString += `
+  <div class="card mb-3 about-card">
+    <div class="row no-gutters">
+      
+      <div class="col-md-4">
+        <img src="${pic}" id="denise" class="card-img" alt="...">
+      </div>
+    
+      <div class="col-md-8 right-column">
+        <div class="card-body">
+          <h5 class="card-title">Career Highlights</h5>
+          <li>Professional Violinist for the last 25 years</li>
+          <li>Member of Nashville Symphony for 23 years, permanent 4th chair</li>
+          <li>Winner of 14 Grammy Awards as member of Nashville Symphony</li>
+          <li>Recordings with professional artists including Garth Brooks, Matchbox 20, Taylor Swift</li>
+          <li>Music video with Tim McGraw</li>
+          <li>Movie soundtrack for Bridget Jones Diary</li>
+          <li>Four Christmas tours with Amy Grant</li>
+          <li>Extensive performances throughout Europe</li>
+          <li>Performances at Carnegie Hall</li>
+          <li>Solo Concerto performances with the Nashville Philharmonic, Nashville Concerto Orchestra, Western
+              Piedmont Symphony
+          </li>
+          <li>Solo performances include Bachinalia Festival, Merkin Hall in NYC, Blair School of Music, Renaissance
+              Center
+          </li>
+          <li>Adjunct Professor of Violin at Blair School of Music for 14 years.</li>
+        </div>
+      </div>
+  
 
-const showBio = () => {
-  $('body').on('click', '#navToBio', aboutMe);
+    <div id="video-container" class="col-sm">
+      <iframe width="400" height="275" src="https://www.youtube.com/embed/ryuIMpOdbpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>     
+      <iframe width="400" height="275" src="https://www.youtube.com/embed/qBvrHxT94Mg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="400" height="275" src="https://www.youtube.com/embed/0QST7zXJizc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+    </div>
+  </div>
+</div>`;
+  utilities.printToDom(domString, 'video');
 };
 
-export default { createBio, showBio };
+
+const showBio = () => {
+  $('body').on('click', '#navToBio', () => {
+    console.log(aboutMe1());
+    $('#bioPage').hide();
+  });
+};
+
+const init = () => {
+  showBio();
+  createBio();
+};
+
+export default { init };
