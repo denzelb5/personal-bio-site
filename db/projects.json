@@ -1,5 +1,6 @@
 {
   "project1": {
+    "githubUrl": "https://github.com/denzelb5/pinterest",
     "name": "Pinterest",
     "date": "November 10th, 2019",
     "siteUrl": "https://pinterest-5ca23.firebaseapp.com",
@@ -9,6 +10,7 @@
     "screenshot": "https://github.com/denzelb5/pinterest/raw/master/screenshots/pinterest1.png"
   },
   "project2": {
+    "githubUrl": "https://github.com/nss-evening-cohort-10/nutshell-renaissance-fair",
     "name": "Nutshell Renaissaince Fair",
     "date": "November 20, 2019",
     "siteUrl": "https://freelancer-redux.web.app/",
@@ -18,6 +20,7 @@
     "screenshot": "https://github.com/nss-evening-cohort-10/nutshell-renaissance-fair/raw/master/src/javascripts/helpers/Screenshot%201.PNG?raw=true"
   },
   "project3": {
+    "githubUrl": "https://github.com/denzelb5/Solar-System",
     "name": "Solar System",
     "date": "October 14, 2019",
     "siteUrl": " https://solar-system-dcb17.firebaseapp.com",
@@ -27,6 +30,7 @@
     "screenshot": "https://github.com/denzelb5/Solar-System/raw/master/screenshots/solar-2.png?raw=true"
   },
   "project4": {
+    "githubUrl": "https://github.com/nss-evening-cohort-10/nutshell-nautilus-explorer",
     "name": "Nutshell Nautilus Explorer",
     "date": "December 4, 2019",
     "siteUrl": "https://nautilus-explorer-part2.web.app/",

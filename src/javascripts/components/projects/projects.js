@@ -12,7 +12,10 @@ const createProjectCards = (project) => {
       <div class="card-body">
         <img src="${project.screenshot}" class="project-image card-img-top" alt="...">
       </div>
-      <div><a href="${project.siteUrl}" id="view-project" class="btn btn-sm btn-danger">View Project</a></div>
+      <div>
+        <a href="${project.siteUrl}" id="view-project" class="btn btn-sm btn-danger project-link">Firebase</a>
+        <a href="${project.githubUrl}" id="view-github" class="btn btn-sm btn-primary project-link">Github</a>
+        </div>
     </div>
     `;
   return domString;
